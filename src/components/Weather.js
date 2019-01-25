@@ -25,7 +25,7 @@ class WeatherMain extends React.Component {
   }
 
   WeatherData() {
-    $.getJSON('https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=235737c7a314ff35a397f5aac6afe065');
+    $.getJSON('https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=235737c7a314ff35a397f5aac6afe065')
     .then(({ results }) => this.setState({ data : results }));
   }
 
