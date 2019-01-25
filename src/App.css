@@ -1,10 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  padding: 20px;
 }
 
 .App-header {
@@ -18,15 +14,57 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Button {
+  position: relative;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Divider {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.Wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  height: 100%;
+  /* width: 100%; */
+  resize: both;
+  overflow: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  transform: translate(-50%, -50%);
+}
+
+.ChildWrapper {
+  padding: 20px;
+}
+
+.mainBody {
+  padding: 20px;
+}
+
+.ChildWrapper::before,
+.ChildWrapper::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  clear: both;
+  /* transform: translate(-50%, -50%); */
+}
+
+.Top-Nav {
+  width: 100vw;
+}
+
+.MainBody {
+  border: 10px solid black;
+  height: 400px;
+  width: 400px;
 }
