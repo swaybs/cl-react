@@ -111,7 +111,7 @@ const MainBody = () => {
   return (
     <div style={BodyStyle}>
       <CityInput />
-      <ReturnSomething />
+      {/* <ReturnSomething /> */}
       <Divider style={DividerStyle} />
       <MainButtons />
     </div>
