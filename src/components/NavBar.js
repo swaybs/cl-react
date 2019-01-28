@@ -7,7 +7,8 @@ import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const NavStyle = {
-  backgroundColor: '#1F3037',
+  // backgroundColor: '#1F3037',
+  background: 'linear-gradient(135deg, #1F3037 0%,rgba(0,0,0,0) 100%)',
 
 };
 

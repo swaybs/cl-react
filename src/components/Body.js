@@ -1,7 +1,13 @@
 import React from 'react';
-import WeatherMain from './Weather';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+
+const ButtonStyles = {
+  margin: '10px',
+};
 
 const BodyStyle = {
 
@@ -28,26 +34,45 @@ const DividerStyle = {
   position: 'relative'
 };
 
+// WRITE NEW CLASS FOR BUTTONS TO RETURN
+// TEXT FROM TEXTFIELD INTO DIV
+class ButtonMains extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      value: "",
+    };
+
+
+  }
+}
+
 const MainButtons = () => {
   return (
     <div>
     <Button
-      variant='fab'
+      id="button-load"
+      variant='contained'
       className="Button"
       size='large'
-      color="primary">
+      color="primary"
+      style={ButtonStyles}>
         Load
         </Button>
     <Button
+      id='button-reset'
       className="Button"
-      variant='fab'
+      variant='contained'
       size='large'
-      color="secondary">
+      color="secondary"
+      style={ButtonStyles}>
         Reset
         </Button>
     </div>
   );
 }
+
 
 
 
@@ -65,6 +90,7 @@ const CityInput = () => (
         style={InputStyle}
         id="city"
         type="search"
+        // label="City"
         placeholder="City"
         helperText='Type the name of your city.'
         fullWidth
@@ -80,6 +106,7 @@ const CityInput = () => (
         style={InputStyle}
         id="state"
         type="search"
+        // label="State"
         placeholder="State"
         helperText='Type the name of state.'
         fullWidth
@@ -93,16 +120,20 @@ const CityInput = () => (
   </form>
   );
 
-
+function getInputText () {
+  var input_value = document.getElementById('city').value;
+  return document.getElementById('return-h1').innerHTML = input_value;
+}
 
 const ReturnSomething = () => {
   return (
     <div>
-    <h1>Hello, text here</h1>
-    <h1>Hello, text here</h1>
+    <h1 id="return-h1">{getInputText}</h1>
+    <h1></h1>
     </div>
   );
 }
+
 
 
 
@@ -111,11 +142,13 @@ const MainBody = () => {
   return (
     <div style={BodyStyle}>
       <CityInput />
-      {/* <ReturnSomething /> */}
+      <ReturnSomething />
       <Divider style={DividerStyle} />
       <MainButtons />
     </div>
   )
 }
+
+
 
 export default MainBody;
