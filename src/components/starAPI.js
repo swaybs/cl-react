@@ -14,11 +14,14 @@ class StarWarsAPI extends Component {
     };
   }
 
-ComponentDidMount = () => {
-  var url = 'https://swapi.co/api';
-  fetch(url).then(response => response.json())
-    .then(data => console.log(data.people, data.films));
-}
+  ComponentDidMount = () => {
+    var url = 'https://swapi.co/api/';
+    fetch(url).then(response => response.json())
+      .then(data => this.state.hits.append(data));
+  }
+
+
+
 
 
 
@@ -30,7 +33,7 @@ ComponentDidMount = () => {
       <div>
       <ul>
         {hits.map(hit =>
-          <li key={hits.objectID}>
+          <li key={hits.name}>
             <a href={hits.url}>{hits.title}</a>
           </li>
         )}
