@@ -16,6 +16,14 @@ const styles = theme => ({
   },
 });
 
+const PrimaryButtonStyles = {
+  background: '#3E151C',
+  color: 'white',
+  borderRadius: 5,
+  padding: '0 30px',
+  boxShadow: 'o 3px 5px 2px rgba(255, 105, 135, .3)',
+};
+
 function FloatingActionButtons(props) {
   const { classes } = props;
   return (

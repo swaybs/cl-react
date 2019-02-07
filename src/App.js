@@ -4,7 +4,7 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import NavBar from './components/NavBar';
 import MainBody from './components/Body';
-import WeatherMain from './components/Weather';
+// import WeatherMain from './components/Weather';
 
 
 
